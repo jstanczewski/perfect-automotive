@@ -1,0 +1,16 @@
+@config "../tailwind.config.mjs";
+@import "tailwindcss";
+
+:root {
+  --brand-blue: #01a2d0;
+  --brand-black: #010204;
+  --brand-white: #ffffff;
+
+  --bg-main: #f6f7fb;
+  --text-main: #0f172a;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
