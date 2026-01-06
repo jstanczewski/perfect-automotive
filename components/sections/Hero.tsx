@@ -1,10 +1,11 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import Image from "next/image";
 
 export function Hero() {
   return (
-    <section id="start" className="relative overflow-hidden">
+    <section id="start" className="scroll-mt-12 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white to-brand-bg" />
       <div className="absolute -top-24 left-1/2 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-brand-blue/10 blur-3xl" />
 
@@ -31,7 +32,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-8 grid grid-cols-3 gap-3">
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
               { t: "24/7", d: "transport / awaryjnie" },
               { t: "Premium", d: "detailing & ochrona" },
@@ -46,29 +47,21 @@ export function Hero() {
         </div>
 
         <Card className="overflow-hidden">
-          <div className="aspect-[16/11] w-full bg-gradient-to-br from-white via-brand-bg to-white">
-            <div className="flex h-full items-center justify-center p-6">
-              <div className="w-full rounded-3xl border border-brand-border bg-white p-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-2xl bg-brand-blue/15" />
-                    <div>
-                      <div className="h-3 w-36 rounded bg-brand-border" />
-                      <div className="mt-2 h-3 w-24 rounded bg-brand-border" />
-                    </div>
-                  </div>
-                  <div className="h-8 w-20 rounded-xl bg-brand-blue" />
-                </div>
+          <div className="relative aspect-[16/11] w-full">
+            <Image
+              src="/images/hero.png"
+              alt="Perfect Automotive — detailing, dealer i autolaweta"
+              fill
+              priority
+              className="object-cover"
+            />
 
-                <div className="mt-6 grid gap-3">
-                  <div className="h-14 w-full rounded-2xl bg-brand-bg" />
-                  <div className="h-14 w-full rounded-2xl bg-brand-bg" />
-                  <div className="h-14 w-full rounded-2xl bg-brand-bg" />
-                </div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/70 via-white/10 to-transparent" />
 
-                <p className="mt-5 text-xs text-brand-muted">
-                  Tutaj wstawimy zdjęcia (detailingu / aut / lawety).
-                </p>
+            <div className="absolute bottom-4 left-4 right-4">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-l font-bold text-brand-black backdrop-blur">
+                <span className="h-2 w-2 rounded-full bg-brand-blue" />
+                Detailing • Dealer • Autolaweta
               </div>
             </div>
           </div>

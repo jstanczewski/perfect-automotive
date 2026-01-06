@@ -2,10 +2,11 @@ import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { fleet } from "@/content/fleet";
+import Image from "next/image";
 
 export function Fleet() {
   return (
-    <section id="flota" className="py-14">
+    <section id="flota" className="scroll-mt-12 py-14">
       <Container>
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
@@ -26,13 +27,15 @@ export function Fleet() {
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {fleet.map((item) => (
             <Card key={item.id} className="overflow-hidden">
-              <div className="aspect-[16/10] w-full bg-gradient-to-br from-white via-brand-bg to-white">
-                {/* placeholder pod zdjęcie */}
-                <div className="flex h-full items-center justify-center">
-                  <div className="rounded-2xl border border-brand-border bg-white px-4 py-2 text-xs font-bold text-brand-muted">
-                    Zdjęcie / {item.tag}
-                  </div>
-                </div>
+              <div className="relative aspect-[16/10] w-full">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/65 via-transparent to-transparent" />
               </div>
 
               <div className="p-6">

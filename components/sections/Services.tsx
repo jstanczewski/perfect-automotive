@@ -70,7 +70,7 @@ function Icon({ id }: { id: string }) {
 
 export function Services() {
   return (
-    <section id="uslugi" className="py-14">
+    <section id="uslugi" className="scroll-mt-12 py-14">
       <Container>
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>

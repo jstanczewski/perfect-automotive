@@ -6,26 +6,23 @@ export type FleetItem = {
   image?: string;
 };
 
-export const fleet: FleetItem[] = [
-  { id: "d1", title: "Detailing — korekta + ceramika", tag: "Realizacja", image: "" },
+export const fleet = [
   {
-    id: "d2",
-    title: "Detailing wnętrza — pranie + zabezpieczenie",
+    id: "f1",
+    title: "Detailing — korekta lakieru i ceramika",
     tag: "Realizacja",
-    image: "",
+    image: "/images/2.png",
   },
   {
-    id: "c1",
-    title: "Auto na sprzedaż — przygotowanie pod klucz",
+    id: "f2",
+    title: "Auto przygotowane do sprzedaży",
     tag: "Dealer",
-    image: "",
+    image: "/images/3.png",
   },
-  { id: "t1", title: "Transport auta — autolaweta", tag: "Autolaweta", image: "" },
   {
-    id: "t2",
-    title: "Transport międzynarodowy — bezpieczny przewóz",
+    id: "f3",
+    title: "Transport pojazdu autolawetą",
     tag: "Autolaweta",
-    image: "",
+    image: "/images/4.png",
   },
-  { id: "c2", title: "Odbiór auta i przygotowanie do wydania", tag: "Dealer", image: "" },
 ];

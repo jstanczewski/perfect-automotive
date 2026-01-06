@@ -51,7 +51,7 @@ export function Contact() {
   };
 
   return (
-    <section id="kontakt" className="py-16 bg-white">
+    <section id="kontakt" className="scroll-mt-12 py-16 bg-white">
       <Container>
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
@@ -131,8 +131,16 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="mt-6 rounded-2xl border border-brand-border bg-brand-bg p-4 text-xs text-brand-muted">
-              Tip: później możemy dodać mapę Google jako embed (bez spowalniania strony).
+            <div className="mt-6 overflow-hidden rounded-2xl border border-brand-border">
+              <div className="relative aspect-[16/10] w-full bg-brand-bg">
+                <iframe
+                  title="Mapa — Perfect Automotive"
+                  src="https://www.google.com/maps?q=Stara+Rumia&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
             </div>
           </Card>
 
